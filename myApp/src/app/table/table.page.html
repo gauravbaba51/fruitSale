@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>table</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- [scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()"> -->
+
+<div class="row header"*ngFor="let header of tableheader">
+  <div class="col">{{header}}</div>
+  <!-- <div class="col">Utility Company Name</div>
+  <div class="col">Service Code</div>
+  <div class="col">Pay Limit</div>
+  <div class="col">Account Number to Use</div>
+  <div class="col"></div> -->
+</div>
+<!-- <div class="row" *ngFor="let data of tabledata">
+  <div class="col">{{data.name}}</div>
+  <div class="col">{{data.code}}</div>
+  <div class="col">LK {{data.limit}}</div>
+  <div class="col">{{data.account}}</div>
+  <div class="col"><button class="button">Add</button></div>
+</div> -->
+
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+<ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>
